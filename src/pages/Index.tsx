@@ -1,16 +1,23 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import Sidebar from "@/components/dashboard/Sidebar";
+import CityMap from "@/components/dashboard/CityMap";
+import LineChartPanel from "@/components/dashboard/LineChartPanel";
+import StatusBar from "@/components/dashboard/StatusBar";
+import MiniStatCards from "@/components/dashboard/MiniStatCards";
 
-// IMPORTANT: Fully REPLACE this with your own code
-const PlaceholderIndex = () => {
-  // PLACEHOLDER: Replace this entire return statement with the user's app.
-  // The inline background color is intentionally not part of the design system.
+const Index = () => {
   return (
-    <div className="flex min-h-screen items-center justify-center" style={{ backgroundColor: '#fcfbf8' }}>
-      <img data-lovable-blank-page-placeholder="REMOVE_THIS" src="/placeholder.svg" alt="Your app will live here!" />
+    <div className="flex h-screen overflow-hidden bg-background">
+      <Sidebar />
+      <main className="flex-1 overflow-y-auto p-5 space-y-4">
+        <StatusBar />
+        <MiniStatCards />
+        <div className="grid grid-cols-1 xl:grid-cols-2 gap-4 flex-1">
+          <CityMap />
+          <LineChartPanel />
+        </div>
+      </main>
     </div>
   );
 };
-
-const Index = PlaceholderIndex;
 
 export default Index;
