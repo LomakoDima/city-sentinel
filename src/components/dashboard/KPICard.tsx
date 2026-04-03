@@ -12,11 +12,11 @@ interface KPICardProps {
 }
 
 const colorMap = {
-  cyan: { ring: "stroke-neon-cyan", text: "text-neon-cyan", bg: "bg-neon-cyan/10", shadow: "shadow-[0_0_15px_hsl(172_66%_50%/0.15)]" },
-  green: { ring: "stroke-neon-green", text: "text-neon-green", bg: "bg-neon-green/10", shadow: "shadow-[0_0_15px_hsl(142_71%_45%/0.15)]" },
-  red: { ring: "stroke-neon-red", text: "text-neon-red", bg: "bg-neon-red/10", shadow: "shadow-[0_0_15px_hsl(0_85%_60%/0.15)]" },
-  orange: { ring: "stroke-neon-orange", text: "text-neon-orange", bg: "bg-neon-orange/10", shadow: "shadow-[0_0_15px_hsl(25_95%_53%/0.15)]" },
-  purple: { ring: "stroke-neon-purple", text: "text-neon-purple", bg: "bg-neon-purple/10", shadow: "shadow-[0_0_15px_hsl(262_83%_58%/0.15)]" },
+  cyan: { ring: "stroke-neon-cyan", text: "text-neon-cyan", bg: "bg-neon-cyan/10", shadow: "shadow-sm" },
+  green: { ring: "stroke-neon-green", text: "text-neon-green", bg: "bg-neon-green/10", shadow: "shadow-sm" },
+  red: { ring: "stroke-neon-red", text: "text-neon-red", bg: "bg-neon-red/10", shadow: "shadow-sm" },
+  orange: { ring: "stroke-neon-orange", text: "text-neon-orange", bg: "bg-neon-orange/10", shadow: "shadow-sm" },
+  purple: { ring: "stroke-neon-purple", text: "text-neon-purple", bg: "bg-neon-purple/10", shadow: "shadow-sm" },
 };
 
 const CircularProgress = ({ progress, color }: { progress: number; color: string }) => {
