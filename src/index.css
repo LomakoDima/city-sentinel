@@ -6,60 +6,60 @@
 
 @layer base {
   :root {
-    --background: 220 20% 96%;
-    --foreground: 220 25% 20%;
+    --background: 160 18% 95%;
+    --foreground: 190 30% 15%;
 
-    --card: 220 20% 98%;
-    --card-foreground: 220 25% 20%;
+    --card: 160 15% 97%;
+    --card-foreground: 190 30% 15%;
 
-    --popover: 220 20% 98%;
-    --popover-foreground: 220 25% 20%;
+    --popover: 160 15% 97%;
+    --popover-foreground: 190 30% 15%;
 
-    --primary: 200 55% 48%;
+    --primary: 188 50% 40%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 220 18% 92%;
-    --secondary-foreground: 220 25% 25%;
+    --secondary: 160 15% 90%;
+    --secondary-foreground: 190 25% 22%;
 
-    --muted: 220 15% 93%;
-    --muted-foreground: 220 10% 50%;
+    --muted: 160 12% 91%;
+    --muted-foreground: 180 10% 45%;
 
-    --accent: 250 40% 60%;
+    --accent: 152 35% 45%;
     --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 55% 55%;
+    --destructive: 0 50% 55%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 220 15% 88%;
-    --input: 220 15% 88%;
-    --ring: 200 55% 48%;
+    --border: 165 14% 86%;
+    --input: 165 14% 86%;
+    --ring: 188 50% 40%;
 
     --radius: 0.75rem;
 
-    /* Custom tokens */
-    --neon-cyan: 195 50% 48%;
-    --neon-green: 155 45% 42%;
-    --neon-red: 0 50% 58%;
-    --neon-orange: 28 65% 55%;
-    --neon-purple: 250 40% 58%;
-    --neon-blue: 215 55% 55%;
+    /* Custom tokens — forest & sea */
+    --neon-cyan: 188 45% 42%;
+    --neon-green: 152 40% 40%;
+    --neon-red: 0 45% 55%;
+    --neon-orange: 30 55% 52%;
+    --neon-purple: 200 35% 48%;
+    --neon-blue: 205 45% 48%;
 
-    --glass-bg: 220 20% 98%;
-    --glass-border: 220 15% 85%;
+    --glass-bg: 160 16% 97%;
+    --glass-border: 165 14% 84%;
     --glass-shine: 0 0% 100%;
 
-    --surface-1: 220 18% 95%;
-    --surface-2: 220 16% 93%;
-    --surface-3: 220 14% 90%;
+    --surface-1: 160 14% 94%;
+    --surface-2: 162 12% 91%;
+    --surface-3: 165 10% 87%;
 
-    --sidebar-background: 220 22% 97%;
-    --sidebar-foreground: 220 20% 35%;
-    --sidebar-primary: 200 55% 48%;
+    --sidebar-background: 162 18% 96%;
+    --sidebar-foreground: 190 20% 30%;
+    --sidebar-primary: 188 50% 40%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 220 18% 93%;
-    --sidebar-accent-foreground: 220 25% 20%;
-    --sidebar-border: 220 15% 90%;
-    --sidebar-ring: 200 55% 48%;
+    --sidebar-accent: 160 14% 91%;
+    --sidebar-accent-foreground: 190 25% 18%;
+    --sidebar-border: 165 14% 88%;
+    --sidebar-ring: 188 50% 40%;
   }
 }
 
