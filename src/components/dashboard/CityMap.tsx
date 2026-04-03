@@ -42,18 +42,18 @@ const CityMap = () => {
       initial={{ opacity: 0, scale: 0.95 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.6 }}
-      className="glass rounded-xl p-4 neon-border-cyan relative overflow-hidden h-full"
+      className="glass neon-border-cyan relative h-full min-h-[260px] overflow-hidden rounded-xl p-4 sm:min-h-[320px]"
     >
       {/* Ambient glow */}
       <div className="absolute top-0 left-1/4 w-60 h-60 bg-neon-cyan/5 rounded-full blur-[80px]" />
       <div className="absolute bottom-0 right-1/4 w-48 h-48 bg-neon-purple/5 rounded-full blur-[60px]" />
 
-      <div className="flex items-center justify-between mb-3 relative z-10">
+      <div className="relative z-10 mb-3 flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
         <div className="flex items-center gap-2">
           <MapPin className="w-4 h-4 text-neon-cyan" />
           <h3 className="font-display font-semibold text-sm text-foreground">City Overview</h3>
         </div>
-        <div className="flex items-center gap-3 text-[10px] text-muted-foreground">
+        <div className="flex flex-wrap items-center gap-2 text-[10px] text-muted-foreground sm:gap-3">
           <span className="flex items-center gap-1"><span className="w-2 h-2 rounded-full bg-neon-red/60" /> High Traffic</span>
           <span className="flex items-center gap-1"><span className="w-2 h-2 rounded-full bg-neon-green/60" /> Optimal</span>
           <Layers className="w-3.5 h-3.5 text-muted-foreground" />

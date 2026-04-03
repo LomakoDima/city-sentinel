@@ -6,14 +6,14 @@ const StatusBar = () => {
     <motion.div
       initial={{ opacity: 0, y: -10 }}
       animate={{ opacity: 1, y: 0 }}
-      className="glass rounded-xl px-5 py-3 flex items-center justify-between"
+      className="glass flex flex-col gap-3 rounded-xl px-4 py-3 sm:flex-row sm:items-center sm:justify-between sm:px-5"
     >
       <div>
         <h2 className="font-display font-bold text-lg text-foreground">City Dashboard</h2>
         <p className="text-[11px] text-muted-foreground">Real-time monitoring · District Alpha</p>
       </div>
 
-      <div className="flex items-center gap-5">
+      <div className="flex flex-wrap items-center gap-3 sm:justify-end sm:gap-5">
         {[
           { icon: Users, label: "12.4M", sub: "Population" },
           { icon: Shield, label: "99.7%", sub: "Uptime" },

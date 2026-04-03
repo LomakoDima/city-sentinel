@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Area, AreaChart } from "recharts";
+import { XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Area, AreaChart } from "recharts";
 import { Activity } from "lucide-react";
 
 const data = [
@@ -27,6 +27,8 @@ const CustomTooltip = ({ active, payload, label }: any) => {
 };
 
 const LineChartPanel = () => {
+  const chartHeight = typeof window !== "undefined" && window.innerWidth < 640 ? 180 : 220;
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -34,12 +36,12 @@ const LineChartPanel = () => {
       transition={{ delay: 0.3 }}
       className="glass rounded-xl p-4"
     >
-      <div className="flex items-center gap-2 mb-4">
+      <div className="mb-4 flex flex-wrap items-center gap-2">
         <Activity className="w-4 h-4 text-neon-cyan" />
         <h3 className="font-display font-semibold text-sm text-foreground">System Metrics</h3>
-        <span className="ml-auto text-[10px] text-muted-foreground">Last 24h</span>
+        <span className="text-[10px] text-muted-foreground sm:ml-auto">Last 24h</span>
       </div>
-      <ResponsiveContainer width="100%" height={200}>
+      <ResponsiveContainer width="100%" height={chartHeight}>
         <AreaChart data={data}>
           <defs>
             <linearGradient id="gradTraffic" x1="0" y1="0" x2="0" y2="1">
@@ -64,7 +66,7 @@ const LineChartPanel = () => {
           <Area type="monotone" dataKey="air" stroke="hsl(142 71% 45%)" fill="url(#gradAir)" strokeWidth={2} name="Air Quality" dot={false} />
         </AreaChart>
       </ResponsiveContainer>
-      <div className="flex justify-center gap-4 mt-3">
+      <div className="mt-3 flex flex-wrap justify-center gap-2 sm:gap-4">
         {[
           { label: "Traffic", color: "bg-neon-cyan" },
           { label: "Energy", color: "bg-neon-purple" },

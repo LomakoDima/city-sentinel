@@ -10,14 +10,14 @@ const stats = [
 
 const MiniStatCards = () => {
   return (
-    <div className="grid grid-cols-4 gap-3">
+    <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 xl:grid-cols-4">
       {stats.map((stat, i) => (
         <motion.div
           key={stat.label}
           initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 + i * 0.05 }}
-          className="glass rounded-xl p-3 flex items-center gap-3"
+          className="glass flex items-center gap-3 rounded-xl p-3"
         >
           <div className={`p-2 rounded-lg ${stat.bg}`}>
             <stat.icon className={`w-4 h-4 ${stat.color}`} />

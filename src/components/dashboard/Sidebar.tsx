@@ -16,10 +16,10 @@ const Sidebar = () => {
       initial={{ opacity: 0, x: -30 }}
       animate={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.5 }}
-      className="w-[340px] h-screen glass-strong flex flex-col border-r border-border/30 overflow-y-auto"
+      className="glass-strong flex w-full flex-col border-b border-border/30 overflow-y-auto lg:h-screen lg:w-[340px] lg:border-b-0 lg:border-r"
     >
       {/* Logo */}
-      <div className="p-5 pb-3">
+      <div className="p-4 pb-3 sm:p-5 sm:pb-3">
         <div className="flex items-center gap-2.5">
           <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-neon-cyan to-neon-blue flex items-center justify-center">
             <LayoutDashboard className="w-4 h-4 text-primary-foreground" />
@@ -32,7 +32,7 @@ const Sidebar = () => {
       </div>
 
       {/* Nav */}
-      <nav className="px-3 mb-4">
+      <nav className="mb-4 px-3">
         {navItems.map((item) => (
           <button
             key={item.label}
@@ -50,7 +50,7 @@ const Sidebar = () => {
       </nav>
 
       {/* KPI Cards */}
-      <div className="px-3 space-y-3 mb-4">
+      <div className="mb-4 space-y-3 px-3">
         <p className="text-[10px] font-medium text-muted-foreground uppercase tracking-wider px-1">Key Metrics</p>
         <KPICard
           title="Traffic Flow"
@@ -82,7 +82,7 @@ const Sidebar = () => {
       </div>
 
       {/* AI Insights */}
-      <div className="px-3 pb-4 mt-auto">
+      <div className="mt-auto px-3 pb-4">
         <AIInsightsPanel />
       </div>
     </motion.aside>
