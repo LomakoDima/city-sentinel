@@ -75,25 +75,27 @@
 
 @layer utilities {
   .glass {
-    background: hsl(var(--glass-bg) / 0.6);
+    background: hsl(var(--glass-bg) / 0.7);
     backdrop-filter: blur(20px);
-    border: 1px solid hsl(var(--glass-border) / 0.3);
+    border: 1px solid hsl(var(--glass-border) / 0.5);
+    box-shadow: 0 1px 3px hsl(220 25% 20% / 0.04);
   }
 
   .glass-strong {
-    background: hsl(var(--glass-bg) / 0.8);
+    background: hsl(var(--glass-bg) / 0.85);
     backdrop-filter: blur(30px);
-    border: 1px solid hsl(var(--glass-border) / 0.4);
+    border: 1px solid hsl(var(--glass-border) / 0.6);
+    box-shadow: 0 2px 8px hsl(220 25% 20% / 0.06);
   }
 
   .neon-border-cyan {
-    border: 1px solid hsl(var(--neon-cyan) / 0.4);
-    box-shadow: 0 0 15px hsl(var(--neon-cyan) / 0.1), inset 0 0 15px hsl(var(--neon-cyan) / 0.05);
+    border: 1px solid hsl(var(--neon-cyan) / 0.25);
+    box-shadow: 0 1px 8px hsl(var(--neon-cyan) / 0.06);
   }
 
   .neon-border-purple {
-    border: 1px solid hsl(var(--neon-purple) / 0.5);
-    box-shadow: 0 0 20px hsl(var(--neon-purple) / 0.15), inset 0 0 20px hsl(var(--neon-purple) / 0.05);
+    border: 1px solid hsl(var(--neon-purple) / 0.25);
+    box-shadow: 0 1px 8px hsl(var(--neon-purple) / 0.06);
   }
 
   .neon-glow-cyan {
