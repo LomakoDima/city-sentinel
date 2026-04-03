@@ -6,60 +6,73 @@
 
 @layer base {
   :root {
-    --background: 160 18% 95%;
-    --foreground: 190 30% 15%;
+    /* ─── Base ─── */
+    --background: 210 20% 96%;
+    --foreground: 215 25% 14%;
 
-    --card: 160 15% 97%;
-    --card-foreground: 190 30% 15%;
+    --card: 210 18% 98%;
+    --card-foreground: 215 25% 14%;
 
-    --popover: 160 15% 97%;
-    --popover-foreground: 190 30% 15%;
+    --popover: 210 18% 98%;
+    --popover-foreground: 215 25% 14%;
 
-    --primary: 188 50% 40%;
+    /* Sky / Sea — primary */
+    --primary: 199 89% 48%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 160 15% 90%;
-    --secondary-foreground: 190 25% 22%;
+    --secondary: 210 16% 90%;
+    --secondary-foreground: 215 20% 22%;
 
-    --muted: 160 12% 91%;
-    --muted-foreground: 180 10% 45%;
+    --muted: 210 14% 91%;
+    --muted-foreground: 215 10% 46%;
 
-    --accent: 152 35% 45%;
+    /* Earth / Trees — accent */
+    --accent: 160 84% 39%;
     --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 50% 55%;
+    --destructive: 0 72% 51%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 165 14% 86%;
-    --input: 165 14% 86%;
-    --ring: 188 50% 40%;
+    --border: 210 14% 86%;
+    --input: 210 14% 86%;
+    --ring: 199 89% 48%;
 
     --radius: 0.75rem;
 
-    /* Custom tokens — forest & sea */
-    --neon-cyan: 188 45% 42%;
-    --neon-green: 152 40% 40%;
-    --neon-red: 0 45% 55%;
-    --neon-orange: 30 55% 52%;
-    --neon-purple: 200 35% 48%;
-    --neon-blue: 205 45% 48%;
+    /* ─── Nature palette tokens ─── */
+    /* ☀ Sun */
+    --sun-400: 38 92% 50%;
+    --sun-500: 32 95% 44%;
+    --sun-600: 25 95% 53%;
 
-    --glass-bg: 160 16% 97%;
-    --glass-border: 165 14% 84%;
+    /* 🌊 Sky / Sea */
+    --neon-cyan: 199 89% 48%;
+    --neon-blue: 204 94% 42%;
+    --neon-purple: 221 83% 53%;
+
+    /* 🌿 Earth / Trees */
+    --neon-green: 160 84% 39%;
+    --neon-red: 0 72% 51%;
+    --neon-orange: 25 95% 53%;
+
+    /* Glass surfaces */
+    --glass-bg: 210 18% 97%;
+    --glass-border: 210 14% 84%;
     --glass-shine: 0 0% 100%;
 
-    --surface-1: 160 14% 94%;
-    --surface-2: 162 12% 91%;
-    --surface-3: 165 10% 87%;
+    --surface-1: 210 16% 94%;
+    --surface-2: 210 14% 91%;
+    --surface-3: 210 12% 87%;
 
-    --sidebar-background: 162 18% 96%;
-    --sidebar-foreground: 190 20% 30%;
-    --sidebar-primary: 188 50% 40%;
+    /* Sidebar */
+    --sidebar-background: 210 20% 97%;
+    --sidebar-foreground: 215 20% 28%;
+    --sidebar-primary: 199 89% 48%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 160 14% 91%;
-    --sidebar-accent-foreground: 190 25% 18%;
-    --sidebar-border: 165 14% 88%;
-    --sidebar-ring: 188 50% 40%;
+    --sidebar-accent: 210 16% 92%;
+    --sidebar-accent-foreground: 215 20% 18%;
+    --sidebar-border: 210 14% 88%;
+    --sidebar-ring: 199 89% 48%;
   }
 }
 
@@ -109,6 +122,38 @@
   .text-gradient-cyan {
     background: linear-gradient(135deg, hsl(var(--neon-cyan)), hsl(var(--neon-blue)));
     -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  /* ─── Nature gradients ─── */
+  .gradient-sun-sky {
+    background: linear-gradient(135deg, hsl(var(--sun-400)), hsl(var(--neon-cyan)));
+  }
+
+  .gradient-sky-earth {
+    background: linear-gradient(135deg, hsl(var(--neon-cyan)), hsl(var(--neon-green)));
+  }
+
+  .gradient-sun-earth {
+    background: linear-gradient(135deg, hsl(var(--sun-500)), hsl(var(--neon-green)));
+  }
+
+  .gradient-sunset {
+    background: linear-gradient(135deg, hsl(var(--sun-600)), hsl(var(--sun-400)), hsl(var(--neon-cyan)));
+  }
+
+  .text-gradient-sun {
+    background: linear-gradient(135deg, hsl(var(--sun-500)), hsl(var(--sun-600)));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .text-gradient-nature {
+    background: linear-gradient(135deg, hsl(var(--sun-400)), hsl(var(--neon-cyan)), hsl(var(--neon-green)));
+    -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
   }
 
@@ -116,4 +161,185 @@
     background-image: radial-gradient(circle, hsl(var(--foreground) / 0.06) 1px, transparent 1px);
     background-size: 24px 24px;
   }
+}
+
+.leaflet-container {
+  font-family: Inter, -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
+}
+
+/* ── 2GIS-style incident markers ─────────────────────────────────────────── */
+
+.incident-marker-2gis {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  border: 2.5px solid #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.25), 0 0 0 1px rgba(0,0,0,0.06);
+  transition: transform 0.15s ease;
+  cursor: pointer;
+}
+.incident-marker-2gis:hover {
+  transform: scale(1.15);
+}
+
+.incident-marker-2gis.accident {
+  background: #EF4444;
+  width: 32px; height: 32px;
+}
+.incident-marker-2gis.repair {
+  background: #F97316;
+  width: 30px; height: 30px;
+}
+.incident-marker-2gis.closure {
+  background: #6B7280;
+  width: 30px; height: 30px;
+}
+.incident-marker-2gis.congestion {
+  background: #F59E0B;
+  width: 30px; height: 30px;
+}
+.incident-marker-2gis.weather {
+  background: #3B82F6;
+  width: 30px; height: 30px;
+}
+.incident-marker-2gis.police {
+  background: #6366F1;
+  width: 30px; height: 30px;
+}
+
+.incident-marker-2gis svg {
+  width: 16px; height: 16px;
+  color: #fff;
+  pointer-events: none;
+}
+
+/* Pulse ring for high-severity incidents */
+.incident-pulse-ring {
+  position: absolute;
+  top: 50%; left: 50%;
+  width: 44px; height: 44px;
+  margin-top: -22px; margin-left: -22px;
+  border-radius: 9999px;
+  pointer-events: none;
+  animation: incident-ping 1.8s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+.incident-pulse-ring.accident    { background: rgba(239, 68, 68, 0.35); }
+.incident-pulse-ring.repair      { background: rgba(249, 115, 22, 0.30); }
+.incident-pulse-ring.closure     { background: rgba(107, 114, 128, 0.25); }
+.incident-pulse-ring.congestion  { background: rgba(245, 158, 11, 0.30); }
+.incident-pulse-ring.weather     { background: rgba(59, 130, 246, 0.30); }
+.incident-pulse-ring.police      { background: rgba(99, 102, 241, 0.30); }
+
+@keyframes incident-ping {
+  0%   { transform: scale(0.7); opacity: 1; }
+  75%  { transform: scale(1.8); opacity: 0; }
+  100% { transform: scale(1.8); opacity: 0; }
+}
+
+/* ── 2GIS-style popup ────────────────────────────────────────────────────── */
+
+.leaflet-popup-content-wrapper.gis-popup {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15), 0 0 0 1px rgba(0,0,0,0.05);
+  padding: 0;
+  min-width: 220px;
+}
+.leaflet-popup-content-wrapper.gis-popup .leaflet-popup-content {
+  margin: 0;
+  padding: 12px 14px;
+  font-size: 12px;
+  line-height: 1.5;
+}
+.leaflet-popup-tip-container .gis-popup-tip {
+  background: #fff;
+}
+
+.gis-popup-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+.gis-popup-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 8px;
+  border-radius: 9999px;
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+.gis-popup-badge.accident    { background: #FEE2E2; color: #DC2626; }
+.gis-popup-badge.repair      { background: #FFEDD5; color: #EA580C; }
+.gis-popup-badge.closure     { background: #F3F4F6; color: #4B5563; }
+.gis-popup-badge.congestion  { background: #FEF3C7; color: #B45309; }
+.gis-popup-badge.weather     { background: #DBEAFE; color: #1D4ED8; }
+.gis-popup-badge.police      { background: #E0E7FF; color: #4338CA; }
+
+.gis-popup-title {
+  font-weight: 700;
+  font-size: 13px;
+  color: #111827;
+}
+.gis-popup-time {
+  font-size: 11px;
+  color: #9CA3AF;
+}
+.gis-popup-desc {
+  color: #6B7280;
+  font-size: 11.5px;
+  margin-top: 4px;
+}
+.gis-popup-delay {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  margin-top: 6px;
+  padding: 3px 8px;
+  border-radius: 6px;
+  background: #FEF3C7;
+  color: #92400E;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+/* ── Live event markers ──────────────────────────────────────────────────── */
+
+.incident-marker-2gis.live-event {
+  box-shadow: 0 2px 8px rgba(0,0,0,0.25), 0 0 0 2px rgba(6,182,212,0.5);
+}
+
+.live-event-new-badge {
+  position: absolute;
+  top: -8px;
+  right: -10px;
+  background: #06b6d4;
+  color: #fff;
+  font-size: 7px;
+  font-weight: 800;
+  padding: 1px 4px;
+  border-radius: 4px;
+  letter-spacing: 0.05em;
+  animation: badge-pulse 1.5s ease-in-out infinite;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+@keyframes badge-pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%      { opacity: 0.7; transform: scale(1.1); }
+}
+
+.live-event-appear {
+  animation: live-appear 0.5s ease-out;
+}
+
+@keyframes live-appear {
+  0%   { transform: scale(0); opacity: 0; }
+  60%  { transform: scale(1.3); opacity: 1; }
+  100% { transform: scale(1); opacity: 1; }
 }

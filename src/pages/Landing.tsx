@@ -84,10 +84,10 @@ export default function Landing() {
 
           <div className="flex items-center gap-2">
             <a
-              href="/dashboard"
+              href="/auth"
               className="hidden rounded-lg border border-primary/30 px-3 py-2 text-sm font-medium text-primary transition-colors hover:bg-primary/10 md:inline-flex"
             >
-              Open Dashboard
+              Войти
             </a>
             <button
               type="button"
@@ -105,7 +105,7 @@ export default function Landing() {
               <a href="#features" onClick={() => setMobileMenuOpen(false)}>Capabilities</a>
               <a href="#metrics" onClick={() => setMobileMenuOpen(false)}>Metrics</a>
               <a href="#timeline" onClick={() => setMobileMenuOpen(false)}>Story</a>
-              <a href="/dashboard" className="pt-1 font-medium text-primary">Open Dashboard</a>
+              <a href="/auth" className="pt-1 font-medium text-primary">Войти</a>
             </div>
           </div>
         )}
@@ -126,10 +126,10 @@ export default function Landing() {
             </p>
             <div className="flex flex-col gap-3 sm:flex-row">
               <a
-                href="/dashboard"
+                href="/auth"
                 className="inline-flex items-center justify-center gap-2 rounded-lg bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground transition-transform hover:-translate-y-0.5"
               >
-                Enter Dashboard <ArrowRight className="h-4 w-4" />
+                Открыть дашборд <ArrowRight className="h-4 w-4" />
               </a>
               <a
                 href="#features"
@@ -205,10 +205,10 @@ export default function Landing() {
               energy, and population density to surface action before disruption appears.
             </p>
             <a
-              href="/dashboard"
+              href="/auth"
               className="mt-6 inline-flex items-center gap-2 rounded-lg bg-primary px-4 py-2.5 text-sm font-semibold text-primary-foreground"
             >
-              Open Live View <ArrowRight className="h-4 w-4" />
+              Открыть систему <ArrowRight className="h-4 w-4" />
             </a>
           </motion.div>
           <motion.div {...sectionMotion} className="glass rounded-2xl p-6 sm:p-8">
@@ -247,10 +247,10 @@ export default function Landing() {
           <motion.div {...sectionMotion} className="mx-auto max-w-3xl px-4 sm:px-6">
             <h2 className="font-display text-4xl font-bold tracking-tight sm:text-5xl">Your city. Fully visible.</h2>
             <a
-              href="/dashboard"
+              href="/auth"
               className="mt-7 inline-flex items-center gap-2 rounded-lg bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground"
             >
-              Launch City Sentinel <ArrowRight className="h-4 w-4" />
+              Запустить City Sentinel <ArrowRight className="h-4 w-4" />
             </a>
             <p className="mt-4 text-xs text-muted-foreground">No setup required · Live data · Free access</p>
           </motion.div>
@@ -260,7 +260,7 @@ export default function Landing() {
       <footer className="mx-auto flex max-w-7xl flex-col gap-3 px-4 py-6 text-sm text-muted-foreground sm:px-6 md:flex-row md:items-center md:justify-between lg:px-8">
         <p className="font-display text-foreground">NexaCity OS v3.2</p>
         <div className="flex flex-wrap gap-4">
-          <a href="/dashboard" className="hover:text-foreground">Dashboard</a>
+          <a href="/auth" className="hover:text-foreground">Войти</a>
           <a href="#features" className="hover:text-foreground">Capabilities</a>
           <a href="#metrics" className="hover:text-foreground">Metrics</a>
         </div>

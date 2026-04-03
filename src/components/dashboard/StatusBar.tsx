@@ -1,7 +1,36 @@
 import { motion } from "framer-motion";
 import { Wifi, Shield, Clock, Users } from "lucide-react";
+import type { CityId } from "@/lib/traffic";
 
-const StatusBar = () => {
+const citySubtitle: Record<CityId, string> = {
+  almaty: "Алматы · Южный транспортный узел",
+  astana: "Астана · Центр магистральной сети",
+  shymkent: "Шымкент · Региональный дорожный контур",
+  aktobe: "Актобе · Западный дорожный узел",
+  karaganda: "Караганда · Промышленный транспортный хаб",
+  pavlodar: "Павлодар · Северо-восточный коридор",
+  atyrau: "Атырау · Западный нефтегазовый узел",
+  kostanay: "Костанай · Северный аграрный контур",
+  taraz: "Тараз · Южный исторический коридор",
+  oral: "Орал · Западно-Казахстанский узел",
+  semey: "Семей · Восточный транспортный контур",
+  ust_kamenogorsk: "Усть-Каменогорск · Восточный промышленный хаб",
+  petropavl: "Петропавловск · Северный пограничный узел",
+  kokshetau: "Кокшетау · Акмолинский дорожный контур",
+  taldykorgan: "Талдыкорган · Жетысуский транспортный узел",
+  turkistan: "Туркестан · Южный культурный коридор",
+  kyzylorda: "Кызылорда · Центрально-южный узел",
+  mangystau: "Актау · Каспийский транспортный хаб",
+  zhezkazgan: "Жезказган · Центральный промышленный контур",
+  ekibastuz: "Экибастуз · Энергетический транспортный узел",
+};
+
+interface StatusBarProps {
+  cityId: CityId;
+  cityName: string;
+}
+
+const StatusBar = ({ cityId, cityName }: StatusBarProps) => {
   return (
     <motion.div
       initial={{ opacity: 0, y: -10 }}
@@ -9,8 +38,8 @@ const StatusBar = () => {
       className="glass flex flex-col gap-3 rounded-xl px-4 py-3 sm:flex-row sm:items-center sm:justify-between sm:px-5"
     >
       <div>
-        <h2 className="font-display font-bold text-lg text-foreground">City Dashboard</h2>
-        <p className="text-[11px] text-muted-foreground">Real-time monitoring · District Alpha</p>
+        <h2 className="font-display font-bold text-lg text-foreground">Главный дашборд · NexaCity OS</h2>
+        <p className="text-[11px] text-muted-foreground">Мониторинг умной транспортной системы</p>
       </div>
 
       <div className="flex flex-wrap items-center gap-3 sm:justify-end sm:gap-5">
