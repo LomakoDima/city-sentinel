@@ -78,7 +78,7 @@ export default function Landing() {
           <a href="#metrics">Metrics</a>
           <a href="#timeline">Story</a>
         </div>
-        <a href="/" className="land-cta-sm">Open Dashboard →</a>
+        <a href="/dashboard" className="land-cta-sm">Open Dashboard →</a>
       </nav>
 
       {/* HERO */}
@@ -106,7 +106,7 @@ export default function Landing() {
           </p>
 
           <div className="land-hero-actions">
-            <a href="/" className="land-btn-primary">
+            <a href="/dashboard" className="land-btn-primary">
               Enter Dashboard
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
             </a>
@@ -195,7 +195,7 @@ export default function Landing() {
           <p className="land-callout-p">
             City Sentinel doesn't just display data — it correlates signals across traffic, atmosphere, energy, and population density to surface insights before problems emerge.
           </p>
-          <a href="/" className="land-btn-primary light">Open Live View →</a>
+          <a href="/dashboard" className="land-btn-primary light">Open Live View →</a>
         </div>
         <div className="land-callout-diagram">
           <div className="land-diagram-ring r1" />
@@ -238,7 +238,7 @@ export default function Landing() {
       {/* FOOTER CTA */}
       <section className="land-footer-cta">
         <h2 className="land-fcta-h2">Your city.<br />Fully visible.</h2>
-        <a href="/" className="land-btn-primary xl">Launch City Sentinel</a>
+        <a href="/dashboard" className="land-btn-primary xl">Launch City Sentinel</a>
         <p className="land-fcta-sub">No setup required · Live data · Free access</p>
       </section>
 
@@ -248,7 +248,7 @@ export default function Landing() {
           <span className="land-logo-mark">⬡</span> NexaCity OS v3.2
         </div>
         <div className="land-footer-links">
-          <a href="/">Dashboard</a>
+          <a href="/dashboard">Dashboard</a>
           <a href="#features">Capabilities</a>
           <a href="#metrics">Metrics</a>
         </div>
