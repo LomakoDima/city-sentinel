@@ -133,7 +133,7 @@ export interface MapDataResponse {
 
 // ── API functions ───────────────────────────────────────────────────────────
 
-const apiBase = import.meta.env.VITE_API_BASE_URL ?? "http://127.0.0.1:8080";
+const apiBase = import.meta.env.VITE_API_BASE_URL ?? "";
 
 export async function fetchTraffic(cityId: CityId): Promise<TrafficResponse> {
   const response = await fetch(`${apiBase}/api/traffic/${cityId}`);

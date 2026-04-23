@@ -25,8 +25,9 @@ interface WSMessage {
   total_active?: number;
 }
 
-const WS_BASE = (import.meta.env.VITE_API_BASE_URL ?? "http://127.0.0.1:8001")
-  .replace(/^http/, "ws");
+const WS_BASE = import.meta.env.VITE_API_BASE_URL
+  ? import.meta.env.VITE_API_BASE_URL.replace(/^http/, "ws")
+  : `ws://${window.location.host}`;
 
 export function useRealtimeEvents(cityId: CityId) {
   const [events, setEvents] = useState<LiveEvent[]>([]);
