@@ -139,3 +139,4 @@ class HealthResponse(BaseModel):
     version: str
     simulation_enabled: bool
     cities_available: int
+    use_openai: bool = False

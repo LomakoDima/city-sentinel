@@ -46,5 +46,6 @@ def health_check() -> HealthResponse:
         version=app.version,
         simulation_enabled=settings.simulation_enabled,
         cities_available=len(CITIES),
+        use_openai=settings.use_openai,
     )
 
